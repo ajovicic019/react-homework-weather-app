@@ -16,6 +16,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
       ready: true,
     });
   }
@@ -38,7 +39,7 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <FormattedDate date={weatherData.date} />
-        <form className="mb-3" onSubmit={handleSubmit}>
+        <form className="mb-5" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
@@ -46,10 +47,15 @@ export default function Weather(props) {
                 placeholder="Enter city..."
                 autoFocus="on"
                 onChange={handleCityChange}
+                className="w-100 h-100"
               />
             </div>{" "}
             <div className="col-3">
-              <input type="submit" value="Search" className="btn btn-light" />
+              <input
+                type="submit"
+                value="Search"
+                className="btn btn-outline-primary"
+              />
             </div>{" "}
           </div>{" "}
         </form>
