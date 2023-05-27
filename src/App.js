@@ -21,6 +21,7 @@ export default function App() {
             href="https://github.com/ajovicic019/react-homework-weather-app"
             target="_blank"
             rel="noreferrer"
+            title="Links for coder and code"
           >
             {" "}
             open sourced{" "}
