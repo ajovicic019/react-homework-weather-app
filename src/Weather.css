@@ -40,9 +40,7 @@
   vertical-align: top;
   line-height: 1;
 }
-.Weather canvas {
-  margin-left: 50px;
-}
+
 .Weather .description {
   margin-top: 5px;
   text-transform: capitalize;
